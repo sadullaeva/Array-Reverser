@@ -13,15 +13,19 @@ public class ArrayInverter<T> implements IArrayInverter<T> {
      * @param array element of the Array class
      */
     public void invertArray(final Array<T> array) {
-        T[] tempArray = array.getArray();
-        int length = tempArray.length;
+        try {
+            T[] tempArray = array.getArray();
+            int length = tempArray.length;
 
-        for (int index = 0; index < length / 2; index++) {
-            T temp = tempArray[index];
-            tempArray[index] = tempArray[length - index - 1];
-            tempArray[length - index - 1] = temp;
+            for (int index = 0; index < length / 2; index++) {
+                T temp = tempArray[index];
+                tempArray[index] = tempArray[length - index - 1];
+                tempArray[length - index - 1] = temp;
+            }
+            array.setArray(tempArray);
+        } catch (NullPointerException e) {
+            System.out.print("Class ArrayInverter: There was something unexpected.\n");
         }
-        array.setArray(tempArray);
     }
 
 }

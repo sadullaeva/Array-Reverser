@@ -22,7 +22,11 @@ public final class Array<T> implements IArray<T> {
      * @param newArray new array
      */
     public Array(final T[] newArray) {
-        array = newArray;
+        try {
+            array = newArray;
+        } catch (NullPointerException e) {
+            System.out.print("Class Array: There was something unexpected.");
+        }
     }
 
     /**
@@ -31,9 +35,7 @@ public final class Array<T> implements IArray<T> {
      */
     public void setArray(final T[] newArray) {
         int length = newArray.length;
-        if (array.length == length) {
-            System.arraycopy(newArray, 0, array, 0, length);
-        }
+        System.arraycopy(newArray, 0, array, 0, length);
     }
 
     /**

@@ -23,11 +23,11 @@ public final class Bootstrap {
     public static void main(final String[] args) {
 
         IArray<Integer> integerArray = new Array<Integer>(ARRAY);
-        ArrayPrinter arrayPrinter = new ArrayPrinter();
-        arrayPrinter.printArray((Array) integerArray);
+        ArrayPrinter<Integer> arrayPrinter = new ArrayPrinter<Integer>();
+        arrayPrinter.printArray((Array<Integer>) integerArray);
         ArrayInverter<Integer> arrayInverter = new ArrayInverter<Integer>();
         arrayInverter.invertArray((Array<Integer>) integerArray);
-        arrayPrinter.printArray((Array) integerArray);
+        arrayPrinter.printArray((Array<Integer>) integerArray);
     }
 
 }
