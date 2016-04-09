@@ -1,7 +1,8 @@
 package it.sevenbits.packages.bootstrap;
 
-import it.sevenbits.packages.array.IArrayClass;
-import it.sevenbits.packages.array.Implementation.ArrayClass;
+import it.sevenbits.packages.array.Implementation.ArrayPrinter;
+import it.sevenbits.packages.array.IArray;
+import it.sevenbits.packages.array.Implementation.Array;
 
 /**
  * Created by marina on 25.03.16.
@@ -20,11 +21,9 @@ public final class Bootstrap {
      */
     public static void main(final String[] args) {
 
-        IArrayClass<Integer> integerArray = new ArrayClass<Integer>(ARRAY);
-        integerArray.printArray();
-        integerArray.invertTheArray();
-        integerArray.printArray();
-
+        IArray<Integer> integerArray = new Array<Integer>(ARRAY);
+        ArrayPrinter arrayPrinter = new ArrayPrinter();
+        arrayPrinter.printArray((Array) integerArray);
     }
 
 }

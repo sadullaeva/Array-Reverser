@@ -6,7 +6,7 @@ package it.sevenbits.packages.array;
  * @param <T> type
  */
 
-public interface IArrayClass<T> {
+public interface IArray<T> {
     /**
      * Setter
      * @param array incoming arg
@@ -20,13 +20,8 @@ public interface IArrayClass<T> {
     T[] getArray();
 
     /**
-     * Printer
-     */
-    void printArray();
-
-    /**
      * Inverter
      */
-    void invertTheArray();
+//    void invertTheArray();
 
 }
