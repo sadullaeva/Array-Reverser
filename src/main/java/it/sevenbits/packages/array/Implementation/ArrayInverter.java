@@ -5,14 +5,14 @@ import it.sevenbits.packages.array.IArrayInverter;
 /**
  * Created by marina on 09.04.16.
  * Invert the array
- * @param <T> type
  */
-public class ArrayInverter<T> implements IArrayInverter<T> {
+public class ArrayInverter implements IArrayInverter {
     /**
      * Array inverter
      * @param array element of the Array class
+     * @param <T> type
      */
-    public void invertArray(final Array<T> array) {
+    public <T> void invertArray(final Array<T> array) {
         try {
             T[] tempArray = array.getArray();
             int length = tempArray.length;

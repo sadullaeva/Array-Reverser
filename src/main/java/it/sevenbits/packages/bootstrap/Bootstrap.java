@@ -23,9 +23,9 @@ public final class Bootstrap {
     public static void main(final String[] args) {
 
         IArray<Integer> integerArray = new Array<Integer>(ARRAY);
-        ArrayPrinter<Integer> arrayPrinter = new ArrayPrinter<Integer>();
+        ArrayPrinter arrayPrinter = new ArrayPrinter();
         arrayPrinter.printArray((Array<Integer>) integerArray);
-        ArrayInverter<Integer> arrayInverter = new ArrayInverter<Integer>();
+        ArrayInverter arrayInverter = new ArrayInverter();
         arrayInverter.invertArray((Array<Integer>) integerArray);
         arrayPrinter.printArray((Array<Integer>) integerArray);
     }

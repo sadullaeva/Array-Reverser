@@ -5,15 +5,15 @@ import it.sevenbits.packages.array.IArrayPrinter;
 /**
  * Created by marina on 09.04.16.
  * Displays the array
- * @param <T> type
  */
-public class ArrayPrinter<T> implements IArrayPrinter<T> {
+public class ArrayPrinter implements IArrayPrinter {
 
     /**
      * Array printer
      * @param array element of the Array class
+     * @param <T> type
      */
-    public void printArray(final Array<T> array) {
+    public <T> void printArray(final Array<T> array) {
         try {
             for (T element : array.getArray()) {
                 System.out.print(element);
