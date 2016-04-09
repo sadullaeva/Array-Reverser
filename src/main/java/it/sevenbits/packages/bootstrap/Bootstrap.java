@@ -1,5 +1,6 @@
 package it.sevenbits.packages.bootstrap;
 
+import it.sevenbits.packages.array.Implementation.ArrayInverter;
 import it.sevenbits.packages.array.Implementation.ArrayPrinter;
 import it.sevenbits.packages.array.IArray;
 import it.sevenbits.packages.array.Implementation.Array;
@@ -23,6 +24,9 @@ public final class Bootstrap {
 
         IArray<Integer> integerArray = new Array<Integer>(ARRAY);
         ArrayPrinter arrayPrinter = new ArrayPrinter();
+        arrayPrinter.printArray((Array) integerArray);
+        ArrayInverter<Integer> arrayInverter = new ArrayInverter<Integer>();
+        arrayInverter.invertArray((Array<Integer>) integerArray);
         arrayPrinter.printArray((Array) integerArray);
     }
 

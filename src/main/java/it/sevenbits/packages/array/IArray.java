@@ -19,9 +19,4 @@ public interface IArray<T> {
      */
     T[] getArray();
 
-    /**
-     * Inverter
-     */
-//    void invertTheArray();
-
 }

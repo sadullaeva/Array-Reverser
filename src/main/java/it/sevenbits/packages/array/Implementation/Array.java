@@ -26,18 +26,6 @@ public final class Array<T> implements IArray<T> {
     }
 
     /**
-     * Invert Array
-     */
-//    public void invertTheArray() {
-//        int length = array.length;
-//        for (int index = 0; index < length / 2; index++) {
-//            T temp = this.array[index];
-//            this.array[index] = this.array[length - index - 1];
-//            this.array[length - index - 1] = temp;
-//        }
-//    }
-
-    /**
      * Setter
      * @param newArray The integer array
      */

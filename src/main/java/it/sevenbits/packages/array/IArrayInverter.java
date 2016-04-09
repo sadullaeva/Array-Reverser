@@ -4,12 +4,13 @@ import it.sevenbits.packages.array.Implementation.Array;
 
 /**
  * Created by marina on 09.04.16.
- * ArrayPrinter interface
+ * ArrayInverter interface
+ * @param <T> type
  */
-public interface IArrayPrinter {
+public interface IArrayInverter<T> {
     /**
-     * Array printer
+     * Array inverter
      * @param array element of the Array class
      */
-    void printArray(final Array array);
+    void invertArray(Array<T> array);
 }
