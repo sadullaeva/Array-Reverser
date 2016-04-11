@@ -1,5 +1,6 @@
 package it.sevenbits.packages.array.Implementation;
 
+import it.sevenbits.packages.array.IArray;
 import it.sevenbits.packages.array.IArrayPrinter;
 
 /**
@@ -13,7 +14,7 @@ public class ArrayPrinter implements IArrayPrinter {
      * @param array element of the Array class
      * @param <T> type
      */
-    public <T> void printArray(final Array<T> array) {
+    public <T> void printArray(final IArray<T> array) {
         try {
             for (T element : array.getArray()) {
                 System.out.print(element);

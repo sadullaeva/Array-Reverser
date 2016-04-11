@@ -1,5 +1,6 @@
 package it.sevenbits.packages.array.Implementation;
 
+import it.sevenbits.packages.array.IArray;
 import it.sevenbits.packages.array.IArrayInverter;
 
 /**
@@ -12,7 +13,7 @@ public class ArrayInverter implements IArrayInverter {
      * @param array element of the Array class
      * @param <T> type
      */
-    public <T> void invertArray(final Array<T> array) {
+    public <T> void invertArray(final IArray<T> array) {
         try {
             T[] tempArray = array.getArray();
             int length = tempArray.length;
