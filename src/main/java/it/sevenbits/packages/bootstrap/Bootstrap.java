@@ -21,13 +21,16 @@ public final class Bootstrap {
      * @param args - just like that
      */
     public static void main(final String[] args) {
-
-        IArray<Integer> integerArray = new Array<Integer>(ARRAY);
-        ArrayPrinter arrayPrinter = new ArrayPrinter();
-        arrayPrinter.printArray((Array<Integer>) integerArray);
-        ArrayInverter arrayInverter = new ArrayInverter();
-        arrayInverter.invertArray((Array<Integer>) integerArray);
-        arrayPrinter.printArray((Array<Integer>) integerArray);
+        try {
+            IArray<Integer> integerArray = new Array<Integer>(ARRAY);
+            ArrayPrinter arrayPrinter = new ArrayPrinter();
+            arrayPrinter.printArray(integerArray);
+            ArrayInverter arrayInverter = new ArrayInverter();
+            arrayInverter.invertArray(integerArray);
+            arrayPrinter.printArray(integerArray);
+        } catch (NullPointerException e) {
+            System.out.print("NullPointerException");
+        }
     }
 
 }

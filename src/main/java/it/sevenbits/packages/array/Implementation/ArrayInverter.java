@@ -12,21 +12,18 @@ public class ArrayInverter implements IArrayInverter {
      * Array inverter
      * @param array element of the Array class
      * @param <T> type
+     * @throws NullPointerException exception
      */
-    public <T> void invertArray(final IArray<T> array) {
-        try {
-            T[] tempArray = array.getArray();
-            int length = tempArray.length;
+    public <T> void invertArray(final IArray<T> array) throws NullPointerException {
+        T[] tempArray = array.getArray();
+        int length = tempArray.length;
 
-            for (int index = 0; index < length / 2; index++) {
-                T temp = tempArray[index];
-                tempArray[index] = tempArray[length - index - 1];
-                tempArray[length - index - 1] = temp;
-            }
-            array.setArray(tempArray);
-        } catch (NullPointerException e) {
-            System.out.print("Class ArrayInverter: There was something unexpected.\n");
+        for (int index = 0; index < length / 2; index++) {
+            T temp = tempArray[index];
+            tempArray[index] = tempArray[length - index - 1];
+            tempArray[length - index - 1] = temp;
         }
+        array.setArray(tempArray);
     }
 
 }
