@@ -1,9 +1,9 @@
 package it.sevenbits.packages.bootstrap;
 
-import it.sevenbits.packages.array.Implementation.ArrayInverter;
-import it.sevenbits.packages.array.Implementation.ArrayPrinter;
+import it.sevenbits.packages.inverter.implementation.ArrayInverter;
+import it.sevenbits.packages.printer.implementation.ArrayPrinter;
 import it.sevenbits.packages.array.IArray;
-import it.sevenbits.packages.array.Implementation.Array;
+import it.sevenbits.packages.array.implementation.Array;
 
 /**
  * Created by marina on 25.03.16.

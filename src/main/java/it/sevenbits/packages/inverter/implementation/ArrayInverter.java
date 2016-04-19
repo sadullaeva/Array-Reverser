@@ -1,7 +1,7 @@
-package it.sevenbits.packages.array.Implementation;
+package it.sevenbits.packages.inverter.implementation;
 
 import it.sevenbits.packages.array.IArray;
-import it.sevenbits.packages.array.IArrayInverter;
+import it.sevenbits.packages.inverter.IArrayInverter;
 
 /**
  * Created by marina on 09.04.16.

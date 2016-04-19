@@ -1,7 +1,7 @@
-package it.sevenbits.packages.array.Implementation;
+package it.sevenbits.packages.printer.implementation;
 
 import it.sevenbits.packages.array.IArray;
-import it.sevenbits.packages.array.IArrayPrinter;
+import it.sevenbits.packages.printer.IArrayPrinter;
 
 /**
  * Created by marina on 09.04.16.

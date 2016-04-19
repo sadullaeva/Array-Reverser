@@ -1,4 +1,4 @@
-package it.sevenbits.packages.array.Implementation;
+package it.sevenbits.packages.array.implementation;
 
 import it.sevenbits.packages.array.IArray;
 

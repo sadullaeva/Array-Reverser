@@ -1,4 +1,6 @@
-package it.sevenbits.packages.array;
+package it.sevenbits.packages.printer;
+
+import it.sevenbits.packages.array.IArray;
 
 /**
  * Created by marina on 09.04.16.
