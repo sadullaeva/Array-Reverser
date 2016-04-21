@@ -3,6 +3,7 @@ package it.sevenbits.packages.printer;
 import it.sevenbits.packages.array.IArray;
 import it.sevenbits.packages.array.implementation.Array;
 import it.sevenbits.packages.printer.implementation.ArrayPrinter;
+import it.sevenbits.packages.printer.implementation.ArrayPrinterException;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -22,7 +23,7 @@ public class ArrayPrinterTest {
     }
 
     @Test
-    public void testArrayPrinter() {
+    public void testArrayPrinter() throws ArrayPrinterException {
         Integer[] ARRAY = new Integer[]{1, 2, 3};
         IArray<Integer> array = new Array<Integer>(ARRAY);
         ArrayPrinter arrayPrinter = new ArrayPrinter();

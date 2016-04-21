@@ -13,13 +13,17 @@ public class ArrayPrinter implements IArrayPrinter {
      * Array printer
      * @param array element of the Array class
      * @param <T> type
-     * @throws NullPointerException exception
+     * @throws ArrayPrinterException exception
      */
-    public <T> void printArray(final IArray<T> array) throws NullPointerException {
-        for (T element : array.getArray()) {
-            System.out.print(element);
-            System.out.print(' ');
+    public <T> void printArray(final IArray<T> array) throws ArrayPrinterException {
+        try {
+            for (T element : array.getArray()) {
+                System.out.print(element);
+                System.out.print(' ');
+            }
+            System.out.print('\n');
+        } catch (NullPointerException npe) {
+            throw new ArrayPrinterException("Input parameter is null", npe);
         }
-        System.out.print('\n');
     }
 }
