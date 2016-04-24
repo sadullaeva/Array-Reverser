@@ -12,12 +12,6 @@ public final class Array<T> implements IArray<T> {
     private T[] array;
 
     /**
-     * Default constructor
-     */
-    private Array() {
-    }
-
-    /**
      * Constructor
      * @param newArray new array
      */

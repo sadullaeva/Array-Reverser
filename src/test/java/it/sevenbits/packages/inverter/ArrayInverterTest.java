@@ -7,7 +7,7 @@ import it.sevenbits.packages.inverter.implementation.ArrayInverterException;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertArrayEquals;
 
 public class ArrayInverterTest {
 
@@ -23,7 +23,7 @@ public class ArrayInverterTest {
         Integer[] INVERTING_ARRAY = new Integer[]{3, 2, 1};
         ArrayInverter arrayInverter = new ArrayInverter();
         arrayInverter.invertArray(integerArray);
-        assertEquals(INVERTING_ARRAY, integerArray.getArray());
+        assertArrayEquals(INVERTING_ARRAY, integerArray.getArray());
     }
 
     @Test(expected = ArrayInverterException.class)
@@ -32,4 +32,25 @@ public class ArrayInverterTest {
         ArrayInverter arrayInverter = new ArrayInverter();
         arrayInverter.invertArray(integerArray);
     }
+
+    @Test
+    public void testDoubleArrayInverter() throws ArrayInverterException {
+        Double[] ARRAY = new Double[]{1.0, 2.5, 3.87};
+        IArray<Double> doubleArray = new Array<Double>(ARRAY);
+        Double[] INVERTING_ARRAY = new Double[]{3.87, 2.5, 1.0};
+        ArrayInverter arrayInverter = new ArrayInverter();
+        arrayInverter.invertArray(doubleArray);
+        assertArrayEquals(INVERTING_ARRAY, doubleArray.getArray());
+    }
+
+    @Test
+    public void testStringArrayInverter() throws ArrayInverterException {
+        String[] ARRAY = new String[]{"1.0", "2.5", "3.87"};
+        IArray<String> stringArray = new Array<String>(ARRAY);
+        String[] INVERTING_ARRAY = new String[]{"3.87", "2.5", "1.0"};
+        ArrayInverter arrayInverter = new ArrayInverter();
+        arrayInverter.invertArray(stringArray);
+        assertArrayEquals(INVERTING_ARRAY, stringArray.getArray());
+    }
+
 }
